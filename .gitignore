@@ -5,6 +5,7 @@ __pycache__/
 
 .idea/
 .exercism/
+node_modules/
 
 # C extensions
 *.so
