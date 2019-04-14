@@ -15,6 +15,9 @@ ASANFLAGS  = -fsanitize=address
 ASANFLAGS += -fno-common
 ASANFLAGS += -fno-omit-frame-pointer
 
+build:
+	@$(CC) $(ASANFLAGS) $(CFLAGS) src/*.c
+
 test: tests.out
 	@./tests.out
 
