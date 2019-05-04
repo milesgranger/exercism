@@ -2,7 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+obj/
+bin/
+*.dll
+*.exe
 .idea/
 .exercism/
 node_modules/
