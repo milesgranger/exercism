@@ -1,3 +1,4 @@
+use core::borrow::BorrowMut;
 
 pub struct Node<T> {
     next: Option<Box<Node<T>>>,
@@ -23,14 +24,14 @@ impl<T: Copy> Node<T> {
             });
 
         if nn_node_has_node {
+            self.next.borrow_mut().unwrap().pop()
+        } else {
             let val = self.next
                 .as_ref()
                 .unwrap()
                 .data;
             self.next = None;
             Some(val)
-        } else {
-            None
         }
 
 
