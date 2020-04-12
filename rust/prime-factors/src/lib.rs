@@ -16,5 +16,5 @@ pub fn factors(n: u64) -> Vec<u64> {
 }
 
 fn is_prime(n: &u64) -> bool {
-    !(2..*n).any(|v| n % &v == 0)
+    !(2..*n - (*n as f64 / 2.0) as u64).any(|v| n % &v == 0)
 }
